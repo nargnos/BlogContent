@@ -33,7 +33,7 @@ Column A | Column B | Column C
 * b
 
 [ ] x  
-[=] y
+[X] y
 
 
 1. 23232
