@@ -35,3 +35,15 @@ int main(void)
 	return 0;
 }
 ```
+还可以在编写Set函数时返回的是一个代理类，用来详细设置配置信息。
+比如 
+```cpp
+MyType *instance = segment.construct<MyType>
+         ("MyType instance")  //name of the object
+         (0.0, 0);
+MyType *array = segment.construct<MyType>
+         ("MyType array")     //name of the object
+         [10]                 //number of elements
+         (0.0, 0);            //Same two ctor arguments for all objects
+```
+这里不扩展了，boost里有一些类就是用到这个.

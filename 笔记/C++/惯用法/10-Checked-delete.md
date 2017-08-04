@@ -5,6 +5,7 @@ categories: C++ Idioms
 tags:
     - C++
     - Idioms
+    - 模板
 ---
 安全的delete对象。<!--more-->  
 
