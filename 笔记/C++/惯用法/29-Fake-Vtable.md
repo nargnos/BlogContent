@@ -1,10 +1,12 @@
 ---
-title: "[C++ Idioms] 29. Fake Vtable"
+title: "[C++ Idioms] 29. [补] Fake Vtable"
 date: 2017-08-01 13:51:09
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 伪虚表。<!--more-->  
 这个惯用法原文是空的没有内容，那我自己根据名字YY一个。  

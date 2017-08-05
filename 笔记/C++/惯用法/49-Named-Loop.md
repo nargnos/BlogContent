@@ -1,10 +1,12 @@
 ---
-title: "[C++ Idioms] 49. [-] Named Loop"
+title: "[C++ Idioms] 49. [少] Named Loop"
 date: 2017-08-02 21:28:32
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 用goto实现 break label/continue label。<!--more-->
 源码如下（原文例子）：

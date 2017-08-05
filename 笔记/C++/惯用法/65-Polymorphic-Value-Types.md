@@ -1,11 +1,12 @@
 ---
-title: "[C++ Idioms] 65. Polymorphic Value Types"
+title: "[C++ Idioms] 65. [补] Polymorphic Value Types"
 date: 2017-08-04 13:24:41
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
     - 模板
+
 ---
 为值类型添加运行时多态支持，并且不使用继承关系。<!--more-->原文没内容，只给了[视频](https://channel9.msdn.com/Events/GoingNative/2013/Inheritance-Is-The-Base-Class-of-Evil)和[PPT](https://github.com/boostcon/cppnow_presentations_2012/blob/master/fri/value_semantics/value_semantics.pdf?raw=true)。这里内容就自己YY。  
 

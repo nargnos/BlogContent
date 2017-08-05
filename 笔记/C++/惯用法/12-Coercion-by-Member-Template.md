@@ -6,6 +6,7 @@ tags:
     - C++
     - Idioms
     - 模板
+
 ---
 让模板支持协变和抗变。<!--more-->  
 在智能指针中有应用。  
@@ -21,7 +22,7 @@ class B:
 {};
 ```
 此时`Template<A>`、`Template<B>`是无法互相赋值的，因为它们是不同类型。  
-在某些时候需要能在这两个类型中转换（智能指针），就需要重载一些operator。  
+在某些时候需要能在这两个类型中转换（智能指针），就需要这样写operator。  
 
 ```cpp
 template<typename T>

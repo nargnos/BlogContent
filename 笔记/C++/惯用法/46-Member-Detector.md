@@ -6,9 +6,12 @@ tags:
     - C++
     - Idioms
     - 模板
+
 ---
 检查类是否有指定成员。<!--more-->SFINAE的一个应用。  
-核心是构建引用歧义使匹配失败。一般是构建成员不存在的方式使匹配失败。相关代码和解释如下：
+核心是构建引用歧义使匹配失败。一般是构建成员不存在的方式使匹配失败。  
+
+相关代码和解释如下：
 ```cpp
 template<typename T>
 class has_member_MemberName
@@ -35,6 +38,7 @@ public:
 };
 
 ```
+
 上面这个不能用在union或final class的情况，下面是自己的改进版（用成员不存在的方法，未在所有编译器测试，不过好像不能用在私有成员的情况）：
 ```cpp
 template<typename T>
@@ -50,6 +54,7 @@ public:
 	static constexpr bool value = decltype(Check<T>(nullptr))::value;
 };
 ```
+
 因为使用时需要在类声明里提供成员名字，所以这里用宏定义生成新的类型：
 ```cpp
 #define GENERATE_HAS_MEMBER(name) \

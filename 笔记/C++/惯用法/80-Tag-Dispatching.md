@@ -1,10 +1,12 @@
 ---
-title: "[C++ Idioms] 80. Tag Dispatching"
+title: "[C++ Idioms] 80. [补] Tag Dispatching"
 date: 2017-08-04 16:34:11
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 类似int to type。<!--more-->
 现在的原文没内容，但是以前记了一些笔记是这个标题的（跟int to type一起的），不是完全能保证是这个的内容。

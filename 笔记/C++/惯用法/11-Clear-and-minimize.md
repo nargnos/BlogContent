@@ -1,10 +1,12 @@
 ---
-title: "[C++ Idioms] 11. [+] Clear and minimize"
+title: "[C++ Idioms] 11. [替] Clear and minimize"
 date: 2017-07-30 17:01:39
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 清除容器并回收内存。<!--more-->  
 有一些容器会分配大于内容的内存，在clear时内存还会占用（capacity），所以此时要清掉这部分占用的空间。  
@@ -13,9 +15,9 @@ tags:
 下面是旧用法：
 ```cpp
 vector<int> vec(0x100);
+vec.clear();
 vec.swap(vector<int>());
 vector<int>().swap(vec); // 也可
-// vec.clear();
 auto size = vec.capacity();
 ```
 

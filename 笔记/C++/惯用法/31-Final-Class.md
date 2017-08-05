@@ -1,10 +1,12 @@
 ---
-title:  "[C++ Idioms] 31. [-] Final Class"
+title:  "[C++ Idioms] 31. [替] Final Class"
 date: 2017-08-01 17:56:25
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 禁止继承类。<!--more-->  
 现在在声明后加final即可。  

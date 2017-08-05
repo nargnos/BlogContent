@@ -1,10 +1,12 @@
 ---
-title:  "[C++ Idioms] 57. [+] Nullptr"
+title:  "[C++ Idioms] 57. [替] Nullptr"
 date: 2017-08-03 12:41:19
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 空指针。<!--more-->现在已用nullptr替换。
 在C中有些地方会用`((void *)0)`，但是赋值的时候会有问题（如`char* p=((void *)0);`）；如果使用0，在重载时便无法区分是数字0还是空指针。

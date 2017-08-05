@@ -1,10 +1,12 @@
 ---
-title: "[C++ Idioms] 30. [-] Fast Pimpl"
+title: "[C++ Idioms] 30. [补] Fast Pimpl"
 date: 2017-08-01 14:41:20
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 加快Pimpl的速度。<!--more-->  
 这个在原文也是没内容的，自己YY一个。因为用字典序的关系，这个排得靠前，所以相关内容其实在Pimpl里。  

@@ -1,11 +1,12 @@
 ---
-title: "[C++ Idioms] 63. Policy-based Design"
+title: "[C++ Idioms] 63. [补] Policy-based Design"
 date: 2017-08-03 18:08:47
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
     - 模板
+
 ---
 基于策略设计。<!--more-->原文无内容，这是YY。  
 这是模板的策略模式，不同于一般的策略模式实现，这里用模板参数作为策略，用法如下：

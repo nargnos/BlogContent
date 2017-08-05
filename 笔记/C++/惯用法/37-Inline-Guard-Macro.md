@@ -1,10 +1,12 @@
 ---
-title: "[C++ Idioms] 37. [-] Inline Guard Macro"
+title: "[C++ Idioms] 37. [易] Inline Guard Macro"
 date: 2017-08-01 19:18:13
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 使用宏定义控制函数的内联。  
 就是定义一个inline的别名，用ifdef子类的做开关，然后在函数前用这个别名即可。  

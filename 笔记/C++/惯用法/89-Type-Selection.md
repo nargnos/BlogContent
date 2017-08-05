@@ -1,10 +1,12 @@
 ---
-title: "[C++ Idioms] 89. [+] Type Selection"
+title: "[C++ Idioms] 89. [替] Type Selection"
 date: 2017-08-04 21:23:24
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 编译时选择类型。<!--more-->之前很多惯用法都有涉及到，这里只上stl源码：
 ```cpp

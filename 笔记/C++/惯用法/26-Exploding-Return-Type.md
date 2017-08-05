@@ -1,10 +1,12 @@
 ---
-title: "[C++ Idioms] 26. [-] Exploding Return Type"
+title: "[C++ Idioms] 26. [易] Exploding Return Type"
 date: 2017-07-31 16:07:31
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 用返回值返回异常或错误代码。<!--more-->  
 这个在原文中没内容。查了一下原文附带的文档，指的可能是创建一个复合对象（union），可带错误码和返回值，通过判断是否发生错误，获取返回值或错误码。  

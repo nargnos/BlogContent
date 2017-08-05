@@ -1,10 +1,12 @@
 ---
-title: "[C++ Idioms] 45. [-] Multi-statement Macro"
+title: "[C++ Idioms] 45. [少] Multi-statement Macro"
 date: 2017-08-02 15:13:19
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 写多行宏定义的技巧。<!--more-->
 在写多行宏定义时：

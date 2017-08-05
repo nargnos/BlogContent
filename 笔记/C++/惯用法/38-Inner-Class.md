@@ -5,9 +5,12 @@ categories: C++ Idioms
 tags:
     - C++
     - Idioms
+
+
 ---
 不使用多继承为类提供多个接口，或在单个抽象中提供同一接口的多个实现。<!--more-->  
 其核心是在在其它类继承接口（并在其它类中提供操作自身的方法），然后在自身保存这些类的变量，并提供对相应接口的转换，这样使用时就可以当其它接口来用。  
+
 语言不好描述，看代码：
 ```cpp
 struct IWalk
@@ -141,6 +144,7 @@ public:
 	void AddInterface()
 	{
 		static_assert(is_assignable<TInterface, TImpl>::value, "");
+		// 不一定用类型名，可用很多其它东西做key
 		auto name = typeid(TInterface).name();
 		map_[name] = make_unique<TImpl>(*this);
 	}

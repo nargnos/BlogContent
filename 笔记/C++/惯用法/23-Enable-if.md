@@ -1,15 +1,18 @@
 ---
-title: "[C++ Idioms] 23. [+] Enable if"
+title: "[C++ Idioms] 23. [替] Enable if"
 date: 2017-07-31 14:29:49
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
     - 模板
+
 ---
 让编译器根据条件选择合适的函数进行编译。<!--more-->  
 基于SFINAE（Substitution Failure Is Not An Error）原理，在编译器寻找合适的模板时，不会将匹配不上视为一种错误，而会继续找直到没有匹配。  
-一般需要配合type trait使用（也可以用其它），主要是构造一系列判断条件，当判断失败时引发匹配失败，这样编译器就可以选择匹配成功的版本进行编译。但是涉及到SFINAE的时候，编译器可能会出现一些BUG，这需要注意不要使用错误语法。    
+
+一般需要配合type trait使用（也可以用其它），主要是构造一系列判断条件，当判断失败时引发匹配失败，这样编译器就可以选择匹配成功的版本进行编译。但是涉及到SFINAE的时候，编译器可能会出现一些BUG，这需要注意不要使用错误语法。   
+
 stl、boost中可以用`enable_if`、`enable_if_t`这两个类。  
 
 用到了模板特化的性质，一般定义如下：
@@ -28,6 +31,7 @@ template<bool Condition, typename T = void>
 using EnableIfType = typename EnableIf<Condition, T>::Type;
 
 ```
+
 Condition是构造的条件，后面是符合条件时导出的类型。  
 
 stl的源码如下：

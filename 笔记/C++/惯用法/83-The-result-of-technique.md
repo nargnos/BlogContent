@@ -1,11 +1,12 @@
 ---
-title: "[C++ Idioms] 83. [+] The result_of technique"
+title: "[C++ Idioms] 83. [替] The result_of technique"
 date: 2017-08-04 17:02:35
 categories: C++ Idioms
 tags:
     - C++
     - Idioms
     - 模板
+
 ---
 获取函数返回值。<!--more-->可以用result_of，stl源码如下：
 ```cpp

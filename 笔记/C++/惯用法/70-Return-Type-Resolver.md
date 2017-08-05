@@ -6,6 +6,7 @@ tags:
     - C++
     - Idioms
     - 模板
+
 ---
 推导被初始化或被赋值的对象的类型。<!--more-->又是一个使用operator Type特性的惯用法：
 ```cpp
