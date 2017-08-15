@@ -10,7 +10,7 @@ tags:
 ---
 将具体数字变为类型。<!--more-->可用integral_constant实现，这是模板元编程的一个类。  
 比较常用的有`true_type`、`false_type`。一般配合模板来用，可用在函数参数中，使函数对不同参数的值产生重载。这样可以跳过if判断，让编译器直接优化代码。  
-还可以放在模板参数、返回类型里。相关的类还有integer_sequence，它存的是数列。  
+还可以放在模板参数、返回类型里。相关的类还有integer_sequence（介绍在其它文档里），它存的是数列。  
 
 ```cpp
 class MyClass

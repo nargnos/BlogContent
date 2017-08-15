@@ -115,3 +115,35 @@ private:
 	}
 };
 ```
+
+简单点就是：
+假设有一个函数：
+```cpp
+void func(bool val)
+{
+	if (val)
+	{
+		// do xxx
+	}
+	else
+	{
+		// do yyy
+	}
+}
+```
+在某些情况xxx、yyy不能同时被编译，或者想把这两个操作分开，这时候可以选择用这个方法：
+```cpp
+void func(true_type)
+{
+	// do xxx
+}
+void func(false_type)
+{
+	// do yyy
+}
+// 调用时
+void x()
+{
+	func(true_type{});
+}
+```
