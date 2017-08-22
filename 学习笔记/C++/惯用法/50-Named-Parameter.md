@@ -49,4 +49,5 @@ MyType *array = segment.construct<MyType>
          [10]                 //number of elements
          (0.0, 0);            //Same two ctor arguments for all objects
 ```
-这里不扩展了，boost里有一些类就是用到这个.
+这里不扩展了，boost里有一些类就是用到这个（interprocess）。
+类库中的用法是，在创建对象的同时为对象设置名字。  
