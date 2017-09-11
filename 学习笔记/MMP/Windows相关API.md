@@ -2,10 +2,11 @@
 title: "[MMP] Windows相关API"
 date: 2017-08-13 16:29:19
 categories: [学习笔记, MMP]  
-tags: MMP
+tags: [MMP,TODO]
 ---
 这里只是记录一部分（之前笔记记的（从其它地方复制来的，做了一些修改），整理放在这），不全。现在新（指的是xp以上）系统里有线程池的API，而且添加了很多有用的函数，可以去找官方文档。  <!--more-->
 MMP这部分剩下还有将近2000行的笔记要整理，就先不整这里了，因为一般不直接用WinAPI。  
+TODO
 
 **@ CreateThread**
 

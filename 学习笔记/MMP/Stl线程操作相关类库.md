@@ -109,7 +109,7 @@ atomic对整型做了一些特化，可以支持一些算术操作，并允许�
 ## Mutex
 `<mutex>`
 **std::mutex**
-提供了基本的互斥机制。内部使用criticalSection实现（vc带的stl，windows）。
+提供了基本的互斥机制。之前内部好像使用criticalSection实现（vc带的stl，windows），但是现在好像用的是SRWLock，因为锁函数调用时会用到API RtlAcquireSRWLockExclusive。
 
 未lock时unlock会引发错误，不能在其它线程unlock解消占用。
 不可递归，不能跨进程使用。
@@ -202,7 +202,7 @@ std::lock: 可以一次锁住多个对象，不会有副作用（如死锁什么
 
 **单次调用**
 once_flag: 用于确保 `call_once` 仅请求调用指定函数一次的辅助对象
-call_once: 仅请求调用指定函数**一次**，即使被多条线程调用
+call_once: 仅请求调用指定函数**一次**，即使被多条线程调用，注意这个函数是阻塞的，会保证执行（或曾经执行）过才放行
 
 # 条件变量
 
@@ -224,6 +224,9 @@ while(!Pred())
 可以这个用来实现信号量。  
 注意检查和等待不是原子的，在调用notify唤醒线程后再设置条件为true，此时会有一定几率通过验证，这是调用速度决定的。（所以最好先设置条件再唤醒）  
 多个条件变量可以共享一个互斥量。  
+在Windows下，wait用的是SleepConditionVariableSRW，不用SleepConditionVariableCS，所以mutex的实现现在用的是SRWLock。
+
+
 
 # 异步操作
 _其实stl的异步操作类库并没有ppl的好用，但是在其它环境好像没有ppl。_
